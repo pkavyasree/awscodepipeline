@@ -1,14 +1,5 @@
-b = 30                                  
-def display():                          
-    print("I am one")
-    global a
-    a = 20
-    b = 25
-    print(b)
-def dispaly2():
-    print("I am two")
-print(b)
-if __name__ == '__main__':
-    display()
-print(a)
-print(b)
+def lambda_handler(event,context):
+    print("This is my first lambda function")
+    return "Hello from lambda"
+eventfunction = event1
+Handlername = lambda_function.lambda_handler
