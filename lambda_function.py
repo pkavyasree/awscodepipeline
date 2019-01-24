@@ -1,5 +1,11 @@
-def lambda_handler(event,context):
-    print("This is my first lambda function")
-    return "Hello from lambda"
-#eventfunction = event1
-#Handlername = lambda_function.lambda_handler
+import boto3
+import json
+
+ec2 = boto3.client('ec2')
+def lambda_handler(event, context):
+    message = 'Hello {} {}!'.format(event['blue'], 
+                                    event['skies'])  
+    return { 
+        'message' : message
+    }
+    
